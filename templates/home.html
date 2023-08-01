@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+    body {
+        background-color: rgb(121, 198, 208);
+        font-family: 'Lucida Sans Unicode';
+    }
+
+    h1 {
+        color: rgb(0, 0, 0);
+        border: 2px solid rgb(154, 204, 211);
+        background-color: powderblue;
+        padding: 10px;
+        display: center;
+        text-align: center;
+        font-size: 200%;
+    }
+
+    button{
+        background: rgb(136, 224, 220);
+        border-radius: 10px;
+    }
+
+    .data {
+        background: rgb(136, 224, 220);
+        border-radius: 10px;
+        width: 40%;
+        display: center;
+        text-align: center;
+        text-shadow: white;
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+
+    .heading {
+        text-size-adjust: 160%;
+        display: center;
+        text-align: center;
+        font-size: 160%;
+    }
+
+    .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+</style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartHome</title>
+
+</head>
+
+<body>
+    <h1>Welcome to the SmartHome Display!</h1>
+    <p class = 'heading'>
+        humidity:
+    </p>
+
+    <p class = 'data'>
+        {{ data["humidity"] }} %
+    </p>
+
+    <p class = 'heading'>
+        temperature:
+    </p>
+   
+    <p class = 'data'>
+        {{ data["temperature"] }} °C
+    </p>
+    
+    <div class = center>
+        <button onClick="window.location.reload();">
+                Refresh Data
+        </button>
+    </div>
+
+</body>
+</html>
